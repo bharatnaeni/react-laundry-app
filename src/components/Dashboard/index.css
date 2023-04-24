@@ -1,0 +1,23 @@
+.dashboard-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.side-nav {
+  background-color: darkgray;
+  height: 100vh;
+  width: 250px;
+}
+.actual-dashboard-container {
+  background-color: pink;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+.Dashboard-overview-top {
+  width: 100%;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 8px;
+}

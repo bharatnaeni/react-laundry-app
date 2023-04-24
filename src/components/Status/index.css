@@ -1,0 +1,38 @@
+.color-boxes-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.color-box-container {
+  background-color: yellow;
+  height: 100px;
+  width: 20%;
+  border-radius: 8px;
+}
+.count-container {
+  width: 100%;
+}
+.count-details-container {
+  width: 100%;
+}
+.pricing-heading {
+  text-align: center;
+}
+
+.pricing-item-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.pricing-list {
+  list-style: none;
+}
+.price-description-container {
+  height: 40px;
+  width: 400px;
+  border: 1px solid gray;
+}
+.price-container {
+  height: 40px;
+  width: 100%;
+  border: 1px solid gray;
+}

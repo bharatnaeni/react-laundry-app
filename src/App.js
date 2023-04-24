@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import LoginForm from "./components/LoginForm";
+import Dashboard from "./components/Dashboard";
+import Profile from "./components/Profile";
+import NotFound from "./components/NotFound";
+import ProtectedRoute from "./components/ProtectedRoute";
+import "./App.css";
+
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route exact path="/login" element={<LoginForm />} />
+      <Route element={<ProtectedRoute />}>
+        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/profile" element={<Profile />} />
+        <Route exact path="/not-found" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/not-found" />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
